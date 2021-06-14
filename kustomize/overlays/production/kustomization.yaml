@@ -5,5 +5,5 @@ resources:
 - hpa.yaml
 - istio.yaml
 - rollout.yaml
+- ingress-route.yaml
 namespace: production
-

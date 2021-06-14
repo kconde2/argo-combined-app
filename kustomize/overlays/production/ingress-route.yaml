@@ -1,0 +1,13 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: argo-combined-app
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - kind: Rule
+    match: Host(`argo-combined-app.kube.kabaconde.com`) && PathPrefix(`/`)
+    services:
+    - name: argo-combined-app
+      port: 80
